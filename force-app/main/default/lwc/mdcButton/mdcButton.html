@@ -1,0 +1,78 @@
+<template>
+  <!-- <slot name="--mdc-theme-primary">
+    <style>
+      --mdc-theme-primary: green;
+    </style>
+  </slot> -->
+  <template if:true={label} >
+    <button class={_class} 
+      data-class={_class}  
+      onclick={handleOnClick} 
+      onmouseover={handleOnMouseOver} 
+      onmouseout={handleOnMouseOut} 
+    >
+      <template if:true={ripple} ></template>  
+      <template if:true={iconBefore} >
+        <lightning-icon icon-name={icon} alternative-text={icon} size="small"></lightning-icon>
+      </template>
+      <span class="mdc-button__ripple"></span> {label}
+      <template if:true={iconAfter} >
+        <lightning-icon icon-name={icon} alternative-text={icon} size="small"></lightning-icon>
+      </template>
+    </button>
+  </template>
+
+  <template if:false={label} >
+    <h1>Demo of &lt;c-mdcButton&gt; LWC</h1> 
+    <div style="margin-bottom:10px;">
+      <button class="mdc-button"
+        data-class="mdc-button"
+        onclick={handleOnClick} 
+        onmouseover={handleOnMouseOver} 
+        onmouseout={handleOnMouseOut} 
+      >
+        <template if:true={ripple} ></template>  
+        <span class="mdc-button__ripple"></span> Text Variant
+      </button>
+    </div>
+    <div style="margin-bottom:10px;">
+      <button class="mdc-button mdc-button--raised"
+      data-class="mdc-button mdc-button--raised"
+      onclick={handleOnClick} 
+      onmouseover={handleOnMouseOver} 
+      onmouseout={handleOnMouseOut} 
+    >
+        <template if:true={ripple} ></template>  
+        <span class="mdc-button__ripple"></span> Raised Variant
+      </button>
+    </div>
+    <div style="margin-bottom:10px;">
+
+      <button class="mdc-button mdc-button--outlined"
+        data-class="mdc-button mdc-button--outlined"
+        onclick={handleOnClick} 
+        onmouseover={handleOnMouseOver} 
+        onmouseout={handleOnMouseOut} 
+      >
+        <template if:true={ripple} ></template>  
+        <span class="mdc-button__ripple"></span> Outlined Variant
+      </button>
+    </div>
+    <div style="margin-bottom:10px;">
+
+      <button class="mdc-button mdc-button--unelevated"
+        data-class="mdc-button mdc-button--unelevated"
+        onclick={handleOnClick} 
+        onmouseover={handleOnMouseOver} 
+        onmouseout={handleOnMouseOut} 
+      >
+        <template if:true={ripple} ></template>  
+        <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" size="small" variant="inverse" ></lightning-icon>
+        <span class="mdc-button__ripple"></span> Unelevated Variant
+      </button>
+    </div>
+
+  </template>
+
+
+</template>

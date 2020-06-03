@@ -1,0 +1,63 @@
+<template>
+  <template if:false={_demoMode} >
+    <button
+      class={_class}
+      aria-label={label}
+      onclick={handleOnClick}
+      onmouseover={handleOnMouseOver}
+      onmouseout={handleOnMouseOut}
+    >
+      <div class="mdc-fab__ripple"></div>
+      <template if:true={iconBefore} >
+        <lightning-icon class="mdc-fab__icon material-icons" variant="inverse" icon-name="utility:sync" alternative-text="utility:sync" size="x-small"></lightning-icon>
+      </template>
+      <span class="mdc-fab__label">{label}</span>
+      <template if:true={iconAfter} >
+        <lightning-icon class="mdc-fab__icon material-icons" variant="inverse" icon-name="utility:sync" alternative-text="utility:sync" size="x-small"></lightning-icon>
+      </template>
+    </button>
+  </template>
+
+  <template if:true={_demoMode} >
+    <div><div>Button></div>
+      <button
+        class="mdc-fab mdc-ripple-upgraded"
+        aria-label="Label"
+      >
+        <div class="mdc-fab__ripple"></div>
+        <lightning-icon class="mdc-fab__icon material-icons" variant="inverse" icon-name="utility:sync" alternative-text="utility:sync" size="x-small"></lightning-icon>
+      </button>
+    </div>
+    <div><div>Mini Button></div>
+      <button
+      class="mdc-fab mdc-fab--mini mdc-ripple-upgraded"
+      aria-label="Label"
+      >
+        <div class="mdc-fab__ripple"></div>
+        <lightning-icon class="mdc-fab__icon material-icons" variant="inverse" icon-name="utility:sync" alternative-text="utility:sync" size="x-small"></lightning-icon>
+      </button>
+    </div>
+    <div><div>Icon Before Text</div>
+      <button
+        class="mdc-fab mdc-fab--extended mdc-ripple-upgraded"
+        aria-label="Label"
+      >
+        <div class="mdc-fab__ripple"></div>
+        <lightning-icon class="mdc-fab__icon material-icons" variant="inverse" icon-name="utility:sync" alternative-text="utility:sync" size="x-small"></lightning-icon>
+        <span class="mdc-fab__label">Before</span>
+      </button>
+    </div>
+    <div><div>Icon Before Text</div>
+      <button
+      class="mdc-fab mdc-fab--extended mdc-ripple-upgraded"
+      aria-label="Label"
+      >
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__label">After</span>
+        <lightning-icon class="mdc-fab__icon material-icons" variant="inverse" icon-name="utility:sync" alternative-text="utility:sync" size="x-small"></lightning-icon>
+      </button>
+    </div>
+
+  </template>
+ 
+</template>
