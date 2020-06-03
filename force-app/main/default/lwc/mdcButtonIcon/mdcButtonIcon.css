@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.icon-container {
+  grid-column: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mdc-icon {
+  border-radius: 50%;
+  cursor: pointer;
+  padding: .3em;
+  transition: background .2s;
+  background-position: center;
+}
+
+.mdc-icon:hover {
+  background: rgba(0, 0, 0, 0.04) radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.04) 1%) center/15000%;
+}
+
+.disabled {
+  color: #9E9E9E;
+}
+
+.disabled:hover {
+  background: none;
+}

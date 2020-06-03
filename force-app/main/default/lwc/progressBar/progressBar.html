@@ -1,0 +1,27 @@
+<template>
+  <template if:true={lightning}>
+    <lightning-progress-bar value={progress}></lightning-progress-bar>
+  </template>
+  <template if:true={html}>
+    <progress id="file" max="100" value={progress}> {progress}% </progress>
+  </template>
+  <template if:true={material}>
+    <div
+      role="progressbar"
+      class="mdc-linear-progress"
+      aria-label="Example Progress Bar"
+      aria-valuemin="0"
+      aria-valuemax="1"
+      aria-valuenow="0"
+    >
+      <div class="mdc-linear-progress__buffering-dots"></div>
+      <div class="mdc-linear-progress__buffer"></div>
+      <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar" style={transform} >
+        <span class="mdc-linear-progress__bar-inner"></span>
+      </div>
+      <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+        <span class="mdc-linear-progress__bar-inner"></span>
+      </div>
+    </div>
+  </template>
+</template>
